@@ -86,7 +86,7 @@ export function EntriesTable() {
                   >
                     <CalendarDays size={14} />
                     Дата
-                    <SortIcon size={13} className="text-blue-500" />
+                    <SortIcon size={13} className="text-amber-500" />
                   </button>
                 </th>
                 <th className="px-4 py-3 text-left font-medium text-gray-600">Вид работ</th>
@@ -100,7 +100,7 @@ export function EntriesTable() {
                 <tr>
                   <td colSpan={5} className="px-4 py-12 text-center text-gray-400">
                     <div className="flex flex-col items-center gap-2">
-                      <div className="h-6 w-6 animate-spin rounded-full border-2 border-blue-500 border-t-transparent" />
+                      <div className="h-6 w-6 animate-spin rounded-full border-2 border-amber-500 border-t-transparent" />
                       <span>Загрузка...</span>
                     </div>
                   </td>
@@ -120,7 +120,7 @@ export function EntriesTable() {
               {entries.map((entry, idx) => (
                 <tr
                   key={entry.id}
-                  className={`border-b border-gray-50 transition-colors hover:bg-blue-50/40 ${
+                  className={`border-b border-gray-50 transition-colors hover:bg-amber-50/40 ${
                     idx % 2 === 0 ? 'bg-white' : 'bg-gray-50/30'
                   }`}
                 >
@@ -130,7 +130,7 @@ export function EntriesTable() {
                     </span>
                   </td>
                   <td className="px-4 py-3.5">
-                    <span className="inline-flex items-center rounded-md bg-blue-50 px-2.5 py-1 text-xs font-medium text-blue-700 ring-1 ring-blue-700/10">
+                    <span className="inline-flex items-center rounded-md bg-amber-50 px-2.5 py-1 text-xs font-medium text-amber-700 ring-1 ring-amber-700/10">
                       {entry.workType.name}
                     </span>
                   </td>
@@ -159,7 +159,7 @@ export function EntriesTable() {
                       <div className="flex items-center justify-center gap-1">
                         <button
                           onClick={() => setEditEntry(entry)}
-                          className="rounded-lg p-1.5 text-gray-300 hover:bg-blue-50 hover:text-blue-500 transition-colors cursor-pointer"
+                          className="rounded-lg p-1.5 text-gray-300 hover:bg-amber-50 hover:text-amber-500 transition-colors cursor-pointer"
                           title="Редактировать"
                         >
                           <Pencil size={15} />

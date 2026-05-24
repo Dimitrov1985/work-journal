@@ -11,12 +11,12 @@ function Journal() {
   const [formOpen, setFormOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-slate-100">
+    <div className="min-h-screen bg-gradient-to-br from-stone-50 via-amber-50/30 to-stone-100">
       {/* Header */}
       <header className="sticky top-0 z-10 border-b border-gray-200 bg-white/80 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <div className="flex items-center gap-3">
-            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-blue-600 shadow-md shadow-blue-200">
+            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-amber-600 shadow-md shadow-amber-200">
               <HardHat size={18} className="text-white" />
             </div>
             <div>
