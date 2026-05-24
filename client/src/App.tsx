@@ -11,17 +11,17 @@ function Journal() {
   const [formOpen, setFormOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-stone-50 via-amber-50/30 to-stone-100">
+    <div className="min-h-screen bg-linear-to-br from-stone-100 via-amber-50/20 to-stone-200">
       {/* Header */}
-      <header className="sticky top-0 z-10 border-b border-gray-200 bg-white/80 backdrop-blur-md">
+      <header className="sticky top-0 z-10 border-b border-stone-800 bg-stone-900">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <div className="flex items-center gap-3">
-            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-amber-600 shadow-md shadow-amber-200">
+            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-amber-500 shadow-md shadow-amber-900/40">
               <HardHat size={18} className="text-white" />
             </div>
             <div>
-              <h1 className="text-base font-semibold text-gray-900">Журнал работ</h1>
-              <p className="text-xs text-gray-400">Строительный объект</p>
+              <h1 className="text-base font-semibold text-stone-100">Журнал работ</h1>
+              <p className="text-xs text-stone-400">Строительный объект</p>
             </div>
           </div>
           <Button onClick={() => setFormOpen(true)} size="md">
