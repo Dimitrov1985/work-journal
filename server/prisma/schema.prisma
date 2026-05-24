@@ -1,0 +1,26 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model WorkType {
+  id      Int         @id @default(autoincrement())
+  name    String      @unique
+  entries WorkEntry[]
+}
+
+model WorkEntry {
+  id           Int      @id @default(autoincrement())
+  date         DateTime @db.Date
+  workTypeId   Int
+  workType     WorkType @relation(fields: [workTypeId], references: [id])
+  volume       Float
+  unit         String
+  executorName String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
